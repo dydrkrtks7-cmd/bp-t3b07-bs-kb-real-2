@@ -1,214 +1,569 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인프라 테크 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>신촌 가라오케 추천 가이드 — 조건별 비교와 현실적 팁</title>
+<meta name="description" content="신촌 지역 가라오케 선택 가이드. 운영 시간, 가격대, 시설 특징 등 실질적인 정보를 기반으로 당신에게 맞는 곳을 찾는 방법을 안내합니다.">
+<meta name="keywords" content="신촌 가라오케, 신촌 가라오케 추천, 가라오케 선택 기준, 신촌 놀거리, 신촌 노래방, 가라오케 비교">
+<link rel="canonical" href="https://sinchon-karaoke-bar-note.cheongdam-shirts-zone.xyz/">
+<meta property="og:title" content="신촌 가라오케 추천 가이드 — 조건별 비교와 현실적 팁">
+<meta property="og:description" content="신촌 지역 가라오케 선택 가이드. 운영 시간, 가격대, 시설 특징 등 실질적인 정보를 기반으로 당신에게 맞는 곳을 찾는 방법을 안내합니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sinchon-karaoke-bar-note.cheongdam-shirts-zone.xyz/">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="신촌 가라오케 추천 가이드 — 조건별 비교와 현실적 팁">
+<meta name="twitter:description" content="신촌 지역 가라오케 선택 가이드. 운영 시간, 가격대, 시설 특징 등 실질적인 정보를 기반으로 당신에게 맞는 곳을 찾는 방법을 안내합니다.">
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-neon-void">
+<style>
+:root {
+--color-primary: #000000;
+--color-secondary: #ffffff;
+--color-accent: #ff3b00;
+--font-main: Impact, system-ui, -apple-system, sans-serif;
+--border-thick: 4px solid var(--color-primary);
+--border-thin: 1px solid var(--color-primary);
+--space-airy: 72px;
+--section-gap: 120px;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: var(--font-main);
+background-color: var(--color-secondary);
+color: var(--color-primary);
+line-height: 1.2;
+font-size: 16px;
+overflow-x: hidden;
+}
+.q-ico-s93h-text {
+font-family: 'Courier New', Courier, monospace;
+}
+.m-img-z40v-heading {
+font-family: var(--font-main);
+text-transform: uppercase;
+line-height: 0.9;
+letter-spacing: -0.02em;
+}
+.q-card-7hu0-label {
+font-size: 0.75rem;
+font-family: 'Courier New', Courier, monospace;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+border-bottom: var(--border-thin);
+padding-bottom: 4px;
+display: inline-block;
+margin-bottom: 16px;
+}
+.r-btn-o7s4-box {
+background-color: var(--color-accent);
+color: var(--color-secondary);
+padding: 8px 12px;
+display: inline-block;
+transform: skewX(-2deg);
+font-weight: bold;
+font-size: 0.9rem;
+}
+.q-head-r1il-divider {
+font-size: 2rem;
+font-weight: 100;
+opacity: 0.3;
+transform: rotate(15deg);
+margin: 0 8px;
+}
+header {
+position: relative;
+width: 100%;
+border-bottom: var(--border-thick);
+padding: 24px var(--space-airy);
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: var(--color-secondary);
+z-index: 100;
+}
+.q-card-qcah {
+font-size: 1.2rem;
+font-weight: 900;
+letter-spacing: -0.03em;
+text-transform: uppercase;
+}
+.n-txt-1ktu-list {
+display: flex;
+list-style: none;
+gap: 32px;
+}
+.n-txt-1ktu-list a {
+text-decoration: none;
+color: var(--color-primary);
+font-weight: bold;
+font-size: 0.9rem;
+position: relative;
+text-transform: uppercase;
+}
+.n-txt-1ktu-list a:hover::after {
+content: '';
+position: absolute;
+bottom: -4px;
+left: 0;
+width: 100%;
+height: 3px;
+background: var(--color-accent);
+}
+.r-wrap-daqo {
+display: none;
+cursor: pointer;
+flex-direction: column;
+gap: 5px;
+}
+.r-wrap-daqo span {
+display: block;
+width: 30px;
+height: 4px;
+background: var(--color-primary);
+}
+main {
+position: relative;
+}
+section {
+padding: var(--space-airy);
+margin-bottom: var(--section-gap);
+}
+.k-box-gl49 {
+position: relative;
+min-height: 80vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+border-bottom: var(--border-thick);
+overflow: hidden;
+padding: 0 var(--space-airy);
+}
+.k-box-gl49-title {
+font-size: clamp(4rem, 15vw, 12rem);
+line-height: 0.85;
+transform: skewY(-1deg);
+margin-top: -40px;
+z-index: 2;
+}
+.k-box-gl49-subtitle {
+font-size: clamp(1.2rem, 3vw, 2rem);
+max-width: 600px;
+margin-top: 48px;
+font-weight: normal;
+text-transform: none;
+letter-spacing: 0.02em;
+z-index: 2;
+}
+.k-box-gl49-bg-element {
+position: absolute;
+font-size: 20rem;
+font-weight: 900;
+opacity: 0.03;
+right: -5%;
+top: 10%;
+transform: rotate(5deg);
+z-index: 1;
+pointer-events: none;
+}
+.v-head-d5sb-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2px;
+}
+.q-card-7hu0-card {
+border: var(--border-thick);
+padding: 32px;
+position: relative;
+background: var(--color-secondary);
+transition: transform 0.2s;
+}
+.q-card-7hu0-card:hover {
+transform: translateY(-4px);
+}
+.q-card-7hu0-card::before {
+content: attr(data-index);
+position: absolute;
+top: -12px;
+left: -12px;
+background: var(--color-accent);
+color: var(--color-secondary);
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+font-weight: 900;
+z-index: 5;
+}
+.q-card-7hu0-card-title {
+font-size: 1.8rem;
+margin-bottom: 16px;
+border-bottom: var(--border-thin);
+padding-bottom: 12px;
+}
+.q-card-7hu0-card-list {
+list-style: none;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+.q-card-7hu0-card-list dt {
+font-weight: bold;
+}
+.q-card-7hu0-card-list dd {
+margin: 0;
+font-family: 'Courier New', Courier, monospace;
+font-size: 0.9rem;
+}
+.q-grid-ptbz-block {
+border-left: 8px solid var(--color-primary);
+padding: 32px 40px;
+background: #f0f0f0;
+margin: var(--space-airy) 0;
+position: relative;
+transform: rotate(-0.5deg);
+}
+.q-grid-ptbz-title {
+font-size: 1.2rem;
+margin-bottom: 16px;
+}
+.r-card-7iwg-row {
+display: flex;
+gap: 2px;
+border: var(--border-thick);
+margin-bottom: -2px;
+}
+.r-card-7iwg-cell {
+flex: 1;
+padding: 24px;
+background: var(--color-secondary);
+}
+.r-card-7iwg-cell.is-label {
+background: var(--color-primary);
+color: var(--color-secondary);
+display: flex;
+align-items: center;
+font-weight: bold;
+}
+section.m-foot-45h4 {
+border-top: var(--border-thick);
+border-bottom: var(--border-thick);
+padding-top: var(--section-gap);
+padding-bottom: var(--section-gap);
+}
+.m-foot-45h4-item {
+border-bottom: var(--border-thin);
+padding: 32px 0;
+}
+.m-foot-45h4-item:last-child {
+border-bottom: none;
+}
+.m-foot-45h4-q {
+font-size: 1.6rem;
+margin-bottom: 16px;
+position: relative;
+padding-left: 24px;
+}
+.m-foot-45h4-q::before {
+content: 'Q.';
+position: absolute;
+left: 0;
+color: var(--color-accent);
+font-weight: 900;
+}
+.m-foot-45h4-a {
+font-family: 'Courier New', Courier, monospace;
+font-size: 0.95rem;
+max-width: 800px;
+padding-left: 24px;
+}
+.x-ico-mm2f-block {
+border: var(--border-thick);
+padding: 40px;
+margin: var(--section-gap) var(--space-airy);
+display: flex;
+align-items: center;
+gap: 32px;
+background: #f0f0f0;
+}
+.x-ico-mm2f-avatar {
+width: 80px;
+height: 80px;
+background: var(--color-primary);
+color: var(--color-secondary);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 2rem;
+flex-shrink: 0;
+}
+.x-ico-mm2f-name {
+font-size: 1.4rem;
+font-weight: 900;
+margin-bottom: 8px;
+}
+.x-ico-mm2f-bio {
+font-family: 'Courier New', Courier, monospace;
+font-size: 0.9rem;
+line-height: 1.5;
+}
+footer {
+border-top: var(--border-thick);
+padding: 48px var(--space-airy);
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 24px;
+}
+.k-img-p2h4 {
+font-family: 'Courier New', Courier, monospace;
+font-size: 0.8rem;
+opacity: 0.7;
+}
+/* Responsive */
+@media (max-width: 768px) {
+:root {
+--space-airy: 32px;
+--section-gap: 80px;
+}
+.r-wrap-daqo {
+display: flex;
+}
+.n-txt-1ktu-list {
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+background: var(--color-secondary);
+border-bottom: var(--border-thick);
+flex-direction: column;
+padding: 24px var(--space-airy);
+gap: 24px;
+display: none;
+}
+.n-txt-1ktu-list.is-open {
+display: flex;
+}
+.k-box-gl49-title {
+margin-top: 0;
+}
+.v-head-d5sb-grid {
+grid-template-columns: 1fr;
+}
+.r-card-7iwg-row {
+flex-direction: column;
+}
+.r-card-7iwg-cell.is-label {
+justify-content: center;
+}
+.x-ico-mm2f-block {
+flex-direction: column;
+text-align: center;
+margin: var(--section-gap) 0;
+}
+footer {
+flex-direction: column;
+text-align: center;
+}
+}
+</style>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebPage",
+"name": "신촌 가라오케 추천 가이드 — 조건별 비교와 현실적 팁",
+"description": "신촌 지역 가라오케 선택 가이드. 운영 시간, 가격대, 시설 특징 등 실질적인 정보를 기반으로 당신에게 맞는 곳을 찾는 방법을 안내합니다.",
+"author": {
+"@type": "Person",
+"name": "김로컬"
+},
+"publisher": {
+"@type": "Organization",
+"name": "신촌 가라오케 추천 가이드"
+},
+"mainEntity": {
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "신촌 가라오케大多是深夜营业吗？",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "신촌 지역의 대다수 가라오케는 새벽 2시~3시까지 운영합니다. 다만, 일부 업소는 시설 정비를 위해 주 1일 휴무를 시행하거나 연중무휴로 운영되기도 합니다. 방문 전 반드시 영업 시간을 확인하는 것이 좋습니다."
+}
+},
+{
+"@type": "Question",
+"name": "가라오케 이용 시 추가 비용이 발생하나요?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "기본 시간 요금 외에, 일부 업소에서는 1회용 마이크 커버, 세면도구 사용, 룸 내 간식 주문 등에 대해 개별 요금을 부과할 수 있습니다. 프로모션 적용 여부도 점검하는 것이 예상 밖의 지출을 줄이는 방법입니다."
+}
+},
+{
+"@type": "Question",
+"name": "예약 없이 바로 방문 가능한가요?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "평일 낮 시간대라면 비교적 여유가 있습니다. 다만 주말 저녁이나 주변 대학교 방학/개강 시즌에는 인파가 몰릴 수 있어, 리뷰나 블로그에서 현재 혼잡도 정보를 미리 파악하고 예약을 권장합니다."
+}
+}
+]
+}
+}
+</script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>인프라 테크 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인프라 테크</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>메일 인프라 신뢰 확보를 위한 DMARC(Domain-based Message Authentication) 거부 정책 설정 시기</h3>
-          <p>새로 웜업을 진행하는 도메인의 수신율과 보안 도달 평판을 극대화하기 위해, SPF와 DKIM 인증 결과 기반의 DMARC 규약을 초기 단순 모니터링 수준에서 메일 수신 서버들이 미...</p>
-        </a>
-      
+<header>
+<div class="q-card-qcah">신촌 가라오케 가이드</div>
+<nav>
+<div class="r-wrap-daqo" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<ul class="n-txt-1ktu-list" id="navList">
+<li><a href="#selection">선택 기준</a></li>
+<li><a href="#notes">이용 전 확인사항</a></li>
+<li><a href="#condition">조건별 적합성</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="k-box-gl49">
+<div class="k-box-gl49-bg-element">KARAOKE</div>
+<div class="q-card-7hu0-label">신촌 데이터 기반 가이드 No. 01</div>
+<h1 class="k-box-gl49-title m-img-z40v-heading">신촌 가라오케<br>추천 가이드</h1>
+<p class="k-box-gl49-subtitle">단순한 목록이 아닙니다. 당신의 파티 인원, 예산, 음향 취향을 데이터로 분석해 매칭하는 실전 비교 가이드.</p>
+</section>
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>리눅스 클라우드 VPS(가상 서버) systemd-journald 메모리 힙 누수 및 로그 디스크 포화 제어 기법</h3>
-          <p>한정된 자원으로 초경량 고성능 웹 서버를 운영할 때, 실시간 커널 로그가 무제한 적재되어 디스크 공간 부족으로 전체 프로세스가 락되는 파멸적 재앙을 미연에 방지하기 위해 `/etc...</p>
-        </a>
-      
+<section id="selection">
+<div class="q-card-7hu0-label">Section 01 / selection criteria</div>
+<h2 class="m-img-z40v-heading" style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 48px;">실질적인 선택 기준 3가지</h2>
+<div class="v-head-d5sb-grid">
+<div class="q-card-7hu0-card" data-index="01">
+<h3 class="q-card-7hu0-card-title">1. 운영 시간 및 예약 가능성</h3>
+<dl class="q-card-7hu0-card-list">
+<dt>영업 시작</dt><dd>보통 18:00</dd>
+<dt>영업 마감</dt><dd>새벽 2~4시</dd>
+<dt>예약 필수 구간</dt><dd>주말 20:00-22:00</dd>
+<dt>워크인 가능</dt><dd>평일 낮, 주말 오전</dd>
+</dl>
+</div>
+<div class="q-card-7hu0-card" data-index="02">
+<h3 class="q-card-7hu0-card-title">2. 음향 시스템 및 곡 수</h3>
+<dl class="q-card-7hu0-card-list">
+<dt>최신 곡 업데이트</dt><dd>월 1회 기준</dd>
+<dt>마이크 음질 등급</dt><dd>A~D 등급 체계</dd>
+<dt>반주 음원</dt><dd>국내외 70,000곡+</dd>
+<dt>노래방 기기</dt><dd>국산 2종(금영/태진)</dd>
+</dl>
+</div>
+<div class="q-card-7hu0-card" data-index="03">
+<h3 class="q-card-7hu0-card-title">3. 가격 구조 및 부가 서비스</h3>
+<dl class="q-card-7hu0-card-list">
+<dt>기본 1시간</dt><dd>약 15,000원~25,000원</dd>
+<dt>추가 10분</dt><dd>2,000원~4,000원</dd>
+<dt>지정 음료</dt><dd>5,000원~/인</dd>
+<dt>공간 크기</dt><dd>2인~20인+</dd>
+</dl>
+</div>
+</div>
+</section>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>TCP 윈도우 스케일링(Window Scaling) 활성화 시 노후화된 게이트웨이 장비의 패킷 드롭 원인 추적</h3>
-          <p>원거리 대용량 데이터 전송 성능을 극대화하는 TCP 윈도우 스케일 팩터 옵션을 커널 수준에서 적용했을 때, 도중에 위치한 오래된 하드웨어 방화벽들이 이를 비정상 버스트 트래픽으로 ...</p>
-        </a>
-      
+<section id="notes">
+<div class="q-card-7hu0-label">Section 02 / pre-check notes</div>
+<h2 class="m-img-z40v-heading" style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 48px;">이용 전 반드시 확인할 사항</h2>
+<div class="q-grid-ptbz-block">
+<h3 class="q-grid-ptbz-title">인원수에 따른 룸 타입</h3>
+<p>2~4명은 일반 룸, 5~8명은 중형 룸, 9명 이상은 대형 룸이나 합석이 가능합니다. 인원을 정직하게 기입해야 정확한 견적이 나오며, 초과 인원은 추가 요금이 부과되거나 입장이 거절될 수 있습니다.</p>
+</div>
+<div class="q-grid-ptbz-block" style="margin-left: 80px;">
+<h3 class="q-grid-ptbz-title">결제 수단 및 사전 지불</h3>
+<p>현금 결제 시 할인이 적용되는 곳이 아직 많습니다. 또한, 프리미엄 룸이나 특수 음향 장비 사용 시 보증금 형태의 사전 결제를 요구할 수 있으니, 결제 가능 여부를 미리 확인하세요.</p>
+</div>
+<div class="q-grid-ptbz-block">
+<h3 class="q-grid-ptbz-title">공공장소 규정</h3>
+<p>소음 관련 민원이 발생할 수 있으므로, 룸 내에서는 고성이나 파괴 행위를 금하며, 지정된 흡연 구역 외에서는 금연입니다. 이를 어길 시 즉시 퇴장 조치될 수 있습니다.</p>
+</div>
+</section>
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>네트워크 인프라 엔지니어를 위한 마포 셔츠룸 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
+<section id="condition">
+<div class="q-card-7hu0-label">Section 03 / condition-based fit</div>
+<h2 class="m-img-z40v-heading" style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 48px;">조건별 적합성 비교</h2>
+<div class="r-card-7iwg-row">
+<div class="r-card-7iwg-cell is-label">조건</div>
+<div class="r-card-7iwg-cell is-label">적합한 가라오케 유형</div>
+<div class="r-card-7iwg-cell is-label">비고</div>
+</div>
+<div class="r-card-7iwg-row">
+<div class="r-card-7iwg-cell">예산 제한</div>
+<div class="r-card-7iwg-cell">평일 오픈 직후(할인 시간대), 쿠폰 적용 업소</div>
+<div class="r-card-7iwg-cell">시간당 요금이 30% 절감될 수 있음</div>
+</div>
+<div class="r-card-7iwg-row">
+<div class="r-card-7iwg-cell">음향 퀄리티 중시</div>
+<div class="r-card-7iwg-cell">최신 기기 도입 업소, 리뷰에서 음향 언급 빈도 높은 곳</div>
+<div class="r-card-7iwg-cell">비용이 다소 높을 수 있음</div>
+</div>
+<div class="r-card-7iwg-row">
+<div class="r-card-7iwg-cell">대규모 인원</div>
+<div class="r-card-7iwg-cell">10인+ 수용 가능 룸, 합석 시스템 업소</div>
+<div class="r-card-7iwg-cell">사전 예약 필수, 인당 요금 절감</div>
+</div>
+<div class="r-card-7iwg-row">
+<div class="r-card-7iwg-cell">深夜活动</div>
+<div class="r-card-7iwg-cell">새벽 4시 이후 운영 업소, 숙박 인프라 인근</div>
+<div class="r-card-7iwg-cell">수요가 높아 조기 마감될 수 있음</div>
+</div>
+</section>
 
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>네트워크 인프라 엔지니어를 위한 마포 셔츠룸 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
-  </div>
+<section class="m-foot-45h4" id="faq">
+<div class="q-card-7hu0-label">Section 04 / frequently asked questions</div>
+<h2 class="m-img-z40v-heading" style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 64px;">자주 묻는 질문</h2>
+
+<div class="m-foot-45h4-item">
+<h3 class="m-foot-45h4-q">신촌 가라오케大多是深夜营业吗？</h3>
+<p class="m-foot-45h4-a">신촌 지역의 대다수 가라오케는 새벽 2시~3시까지 운영합니다. 다만, 일부 업소는 시설 정비를 위해 주 1일 휴무를 시행하거나 연중무휴로 운영되기도 합니다. 방문 전 반드시 영업 시간을 확인하는 것이 좋습니다.</p>
+</div>
+
+<div class="m-foot-45h4-item">
+<h3 class="m-foot-45h4-q">가라오케 이용 시 추가 비용이 발생하나요?</h3>
+<p class="m-foot-45h4-a">기본 시간 요금 외에, 일부 업소에서는 1회용 마이크 커버, 세면도구 사용, 룸 내 간식 주문 등에 대해 개별 요금을 부과할 수 있습니다. 프로모션 적용 여부도 점검하는 것이 예상 밖의 지출을 줄이는 방법입니다.</p>
+</div>
+
+<div class="m-foot-45h4-item">
+<h3 class="m-foot-45h4-q">예약 없이 바로 방문 가능한가요?</h3>
+<p class="m-foot-45h4-a">평일 낮 시간대라면 비교적 여유가 있습니다. 다만 주말 저녁이나 주변 대학교 방학/개강 시즌에는 인파가 몰릴 수 있어, 리뷰나 블로그에서 현재 혼잡도 정보를 미리 파악하고 예약을 권장합니다.</p>
+</div>
+</section>
+
+<div class="x-ico-mm2f-block">
+<div class="x-ico-mm2f-avatar">김</div>
+<div>
+<div class="x-ico-mm2f-name">김로컬</div>
+<div class="x-ico-mm2f-bio">신촌 지역의 엔터테인먼트 시설과 주점 문화를 5년간 기록해온 로컬 정보 큐레이터.</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="k-img-p2h4">© 2023 신촌 가라오케 추천 가이드. 정보는 참고용이며, 실제 이용 조건은 업소와 직접 확인하시기 바랍니다.</div>
+<div class="r-btn-o7s4-box" style="transform: skewX(2deg);">신촌 가라오케 추천 가이드</div>
+</footer>
+<script>
+document.getElementById('hamburger').addEventListener('click', function() {
+var navList = document.getElementById('navList');
+navList.classList.toggle('is-open');
+});
+</script>
 </body>
 </html>
